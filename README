@@ -1,0 +1,20 @@
+publicaddr
+==========
+	publicaddr.net
+
+usage
+-----
+	$ cd publicaddr
+	$ make
+	$ ./{usage,publicaddr}
+
+depends on
+----------
+	* make
+	* cc
+	* httpd
+	* slowcgi
+
+license
+-------
+	ISC
