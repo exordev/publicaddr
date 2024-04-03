@@ -1,28 +1,25 @@
 PREFIX=		${DESTDIR}/var/www
 CGIDIR=		${PREFIX}/cgi-bin
 
-LDFLAGS=	-static -pie
 CFLAGS=		-O2 -W -Wall -Werror -Wextra -pedantic -ansi
+LDFLAGS=	-static -pie
 
-all: usage publicaddr
+all: publicaddr
 
 .c.o:
 	${CC} ${CFLAGS} -c $<
-
-usage: usage.o
-	${CC} -o $@ ${LDFLAGS} $?
 
 publicaddr: publicaddr.o
 	${CC} -o $@ ${LDFLAGS} $?
 
 clean:
-	rm -rf *.o *.core usage publicaddr
+	rm -rf *.o *.core publicaddr
 
 install: all
 	mkdir -p ${CGIDIR}
-	cp -Rp usage publicaddr ${CGIDIR}
+	cp -p publicaddr ${CGIDIR}
 
 uninstall:
-	rm -rf ${CGIDIR}/{usage,publicaddr}
+	rm -rf ${CGIDIR}/publicaddr
 
 .PHONY: all clean install uninstall
