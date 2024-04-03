@@ -4,9 +4,11 @@ publicaddr
 
 usage
 -----
-	$ cd publicaddr
-	$ make
-	$ ./{usage,publicaddr}
+	# rcctl enable slowcgi
+	# rcctl start slowcgi
+	# rcctl enable httpd
+	# rcctl start httpd
+	$ $BROWSER example.com
 
 depends on
 ----------
@@ -17,4 +19,4 @@ depends on
 
 license
 -------
-	ISC
+	isc
