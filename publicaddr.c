@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Jose G Perez Taveras <josegpt27@gmail.com>
+ * Copyright (c) 2024 Jose G Perez Taveras <josegpt27@gmail.com>
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -28,5 +28,5 @@ main(void)
 	puts("Content-Type: text/plain\r");
 	puts("\r");
 	puts(getenv("HTTP_X_FORWARDED_FOR"));
-	return EXIT_SUCCESS;
+	return (EXIT_SUCCESS);
 }
