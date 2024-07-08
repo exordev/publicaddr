@@ -8,7 +8,7 @@ usage
 	# rcctl start slowcgi
 	# rcctl enable httpd
 	# rcctl start httpd
-	$ $BROWSER example.com
+	$ $BROWSER publicaddr.net
 
 depends on
 ----------
